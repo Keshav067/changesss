@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=League+Spartan:wght@400;700&display=swap');
+
+.comedy-page-wrapper .cover_img_comedy{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.58),
+        rgba(0,0,0,.78)
+    ),
+    url(../../../img/images/comedycons/hero.jpg);
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+.comedy-page-wrapper .hero-dark-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(255,193,7,.12),
+        transparent 55%
+    );
+
+}
+
+.comedy-page-wrapper .hero-content{
+
+    position:relative;
+
+    z-index:5;
+
+    text-align:center;
+
+    width:min(850px,90vw);
+
+}
+
+.comedy-page-wrapper .hero-club{
+
+    color:#FFD54F;
+
+    letter-spacing:8px;
+
+    font-weight:600;
+
+    margin-bottom:30px;
+
+}
+
+.comedy-page-wrapper .hero-title{
+
+    font-family:"League Spartan";
+
+    font-size:clamp(4rem,9vw,8rem);
+
+    color:white;
+
+    font-weight:800;
+
+    margin:0;
+
+}
+
+.comedy-page-wrapper .hero-title span{
+
+    background:
+    linear-gradient(
+        90deg,
+        #FFD54F,
+        #FF9800,
+        #FF7043
+    );
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+}
+
+.comedy-page-wrapper .hero-divider{
+
+    width:220px;
+
+    height:2px;
+
+    margin:28px auto;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        #FFD54F,
+        transparent
+    );
+
+}
+
+.comedy-page-wrapper .hero-subtitle{
+
+    color:white;
+
+    font-size:2rem;
+
+    margin-bottom:15px;
+
+}
+
+.comedy-page-wrapper .hero-small{
+
+    color:#d8d8d8;
+
+    margin-bottom:40px;
+
+}
+
+.comedy-page-wrapper .hero-btn{
+
+    padding:16px 42px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #FFB300,
+        #FF7043
+    );
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.comedy-page-wrapper .hero-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 15px 35px rgba(255,140,0,.35);
+
+}
+
+.comedy-page-wrapper .hero-socials{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    margin-top:40px;
+
+}
+
+.comedy-page-wrapper .hero-socials a{
+
+    color:white;
+
+    font-size:1.6rem;
+
+    transition:.3s;
+
+}
+
+.comedy-page-wrapper .hero-socials a:hover{
+
+    color:#FFD54F;
+
+    transform:translateY(-4px);
+
+}
+
+.rotating-bg-card {
+  margin: 0 auto;
+  padding: 0.5em;
+  /* width: 300px; */
+  background: #1c1f2b;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.rotating-bg-card::after,
+.rotating-bg-card::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 10px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+
+.rotating-bg-card::before {
+  filter: blur(1.5rem);
+  opacity: 0.2;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+
+  to {
+    --angle: 360deg;
+  }
+}
+
+.highlighted_div {
+  border-radius: 0 0 10px 10px;
+  background: linear-gradient(45deg,
+      #FFA500,
+      #FFA500,
+      #FFA500,
+      #ffea80,
+      #FFA500,
+      #FFA500,
+      #FFA500);
+  background-size: 200% 200%;
+  animation: Shine 10s ease infinite alternate;
+}
+
+.normal_div {
+  border-radius: 0 0 10px 10px;
+  background: linear-gradient(45deg,
+      silver,
+      white,
+      silver,
+      silver,
+      silver,
+      white,
+      silver,
+      silver,
+      silver,
+      white,
+      silver);
+  background-size: 200% 200%;
+  animation: Shine 10s ease infinite alternate;
+}
+
+@keyframes Shine {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.comedy-section {
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Comic Neue', cursive;
+}
+
+.comedy-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #ff5e00;
+  text-shadow: 1px 1px #000;
+}
+
+.comedy-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.comedy-card {
+  background: #fff;
+  border: 2px dashed #ffb700;
+  border-radius: 16px;
+  padding: 20px;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.comedy-card:hover {
+  transform: translateY(-10px) rotate(-1deg);
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.comedy-img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.comedy-card-title {
+  font-size: 1.5rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.comedy-desc {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.4;
+}
+
+.logo {
+  box-shadow: none;
+}
+
+.introparafont {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Poppins';
+  margin: 0;
+  padding-right: 0;
+}
+
+.highlighted-text-div {
+  background-color: aliceblue;
+  border-radius: 0 0 10px 10px;
+  align-items: flex-start;
+  align-self: center;
+  padding: 0;
+  padding-top: 10px;
+  text-align: left;
+  border: 3px solid #ff6347;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  /* Add subtle shadow for depth */
+  animation: highlightPulse 2s infinite alternate;
+  /* Add pulsing effect */
+}
+
+@keyframes highlightPulse {
+  0% {
+    box-shadow: 0px 4px 15px rgba(255, 99, 71, 0.3);
+    /* Pulsing glow effect */
+  }
+
+  100% {
+    box-shadow: 0px 4px 25px rgba(255, 99, 71, 0.6);
+    /* Stronger glow */
+  }
+}
+
+.highlighted-text-div::before {
+  content: "🔥Flagship🔥";
+  position: absolute;
+  right: -8%;
+  bottom: 33%;
+  transform: translateX(-50%);
+  background-color: #ff6347;
+  /* Background color for the label */
+  color: white;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  /* Subtle shadow for better visibility */
+}
+
+.flagship {
+  display: flex;
+  /* Enable Flexbox */
+  justify-content: center;
+  /* Center the child horizontally */
+  align-items: center;
+  /* Center the child vertically */
+  width: 100%;
+}
+
+.introtext {
+  font-family: 'League Spartan';
+}
